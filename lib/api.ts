@@ -8,7 +8,7 @@ export const API_ENDPOINTS = {
   LOGIN: `${BASE_API_URL}/login`,
   PROFILE: `${BASE_API_URL}/profile`,
   INTERESTS: `${BASE_API_URL}/interests`,
-
+  ANALYSIS: `${BASE_API_URL}/analysis`,
 }
 
 // API utility functions
@@ -87,7 +87,7 @@ export const performAnalysis = async (analysisData: {
     fetch_emotions: boolean;
   };
 }) => {
-  return apiRequest(`${BASE_API_URL}/analysis`, {
+  return apiRequest(API_ENDPOINTS.ANALYSIS, {
     method: "POST",
     body: JSON.stringify(analysisData),
   });
