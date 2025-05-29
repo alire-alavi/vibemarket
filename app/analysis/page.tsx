@@ -48,13 +48,32 @@ const analysisTypes = [
 ]
 
 const popularAssets = [
-  { symbol: "BTC/USD", name: "Bitcoin", type: "crypto", price: "$42,350", change: "+2.3%" },
-  { symbol: "ETH/USD", name: "Ethereum", type: "crypto", price: "$2,420", change: "+5.7%" },
-  { symbol: "AAPL", name: "Apple Inc.", type: "stocks", price: "$185.25", change: "-0.8%" },
-  { symbol: "TSLA", name: "Tesla Inc.", type: "stocks", price: "$248.50", change: "+1.2%" },
-  { symbol: "EUR/USD", name: "Euro/US Dollar", type: "forex", price: "1.0875", change: "+0.15%" },
-  { symbol: "GBP/USD", name: "British Pound/US Dollar", type: "forex", price: "1.2650", change: "-0.22%" },
-]
+  { name: "Bitcoin", symbol: "BTC", id: "bitcoin", type: "crypto", price: "$42,350", change: "+2.3%" },
+  { name: "Ethereum", symbol: "ETH", id: "ethereum", type: "crypto", price: "$2,420", change: "+5.7%" },
+  { name: "Tether", symbol: "USDT", id: "tether", type: "crypto", price: "$1.00", change: "0.0%" },
+  { name: "XRP", symbol: "XRP", id: "ripple", type: "crypto", price: "$0.50", change: "+1.2%" },
+  { name: "BNB", symbol: "BNB", id: "binancecoin", type: "crypto", price: "$300.00", change: "-0.5%" },
+  { name: "Solana", symbol: "SOL", id: "solana", type: "crypto", price: "$20.00", change: "+3.1%" },
+  { name: "USD Coin", symbol: "USDC", id: "usd-coin", type: "crypto", price: "$1.00", change: "0.0%" },
+  { name: "Dogecoin", symbol: "DOGE", id: "dogecoin", type: "crypto", price: "$0.07", change: "+0.8%" },
+  { name: "Cardano", symbol: "ADA", id: "cardano", type: "crypto", price: "$0.35", change: "-1.2%" },
+  { name: "TRON", symbol: "TRX", id: "tron", type: "crypto", price: "$0.08", change: "+0.5%" },
+  { name: "Sui", symbol: "SUI", id: "sui", type: "crypto", price: "$0.10", change: "-0.3%" },
+  { name: "Hyperliquid", symbol: "HYPE", id: "hyperliquid", type: "crypto", price: "$0.50", change: "+2.0%" },
+  { name: "Chainlink", symbol: "LINK", id: "chainlink", type: "crypto", price: "$7.50", change: "+1.5%" },
+  { name: "Avalanche", symbol: "AVAX", id: "avalanche-2", type: "crypto", price: "$15.00", change: "-0.8%" },
+  { name: "Stellar", symbol: "XLM", id: "stellar", type: "crypto", price: "$0.12", change: "+0.9%" },
+  { name: "Toncoin", symbol: "TON", id: "the-open-network", type: "crypto", price: "$2.00", change: "+1.1%" },
+  { name: "Shiba Inu", symbol: "SHIB", id: "shiba-inu", type: "crypto", price: "$0.00001", change: "+0.3%" },
+  { name: "UNUS SED LEO", symbol: "LEO", id: "leo-token", type: "crypto", price: "$4.00", change: "-0.2%" },
+  { name: "Bitcoin Cash", symbol: "BCH", id: "bitcoin-cash", type: "crypto", price: "$120.00", change: "+1.8%" },
+  { name: "Hedera", symbol: "HBAR", id: "hedera-hashgraph", type: "crypto", price: "$0.05", change: "+0.6%" },
+  { name: "Litecoin", symbol: "LTC", id: "litecoin", type: "crypto", price: "$90.00", change: "-0.4%" },
+  { name: "Polkadot", symbol: "DOT", id: "polkadot", type: "crypto", price: "$5.00", change: "+0.7%" },
+  { name: "Monero", symbol: "XMR", id: "monero", type: "crypto", price: "$150.00", change: "+1.0%" },
+  { name: "Bitget Token", symbol: "BGB", id: "bitget-token", type: "crypto", price: "$0.20", change: "+0.5%" },
+  { name: "Pepe", symbol: "PEPE", id: "pepe", type: "crypto", price: "$0.000001", change: "+0.2%" },
+];
 
 const riskToleranceOptions = [
   { id: "low", name: "Low", description: "Conservative approach, minimal risk" },
@@ -136,7 +155,7 @@ export default function AnalysisPage() {
 
   const handleStartAnalysis = async () => {
     const analysisData = {
-      ticker: formData.selectedAsset?.symbol || "",
+      ticker: formData.selectedAsset?.id || "",
       risk_tolerance: formData.riskTolerance,
       time_horizon: formData.timeHorizon,
       analysis_type: formData.analysisType,
