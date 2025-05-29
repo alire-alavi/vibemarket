@@ -48,31 +48,29 @@ const analysisTypes = [
 ]
 
 const popularAssets = [
-  { name: "Bitcoin", symbol: "BTC", id: "bitcoin", type: "crypto", price: "$42,350", change: "+2.3%" },
-  { name: "Ethereum", symbol: "ETH", id: "ethereum", type: "crypto", price: "$2,420", change: "+5.7%" },
-  { name: "Tether", symbol: "USDT", id: "tether", type: "crypto", price: "$1.00", change: "0.0%" },
-  { name: "XRP", symbol: "XRP", id: "ripple", type: "crypto", price: "$0.50", change: "+1.2%" },
-  { name: "BNB", symbol: "BNB", id: "binancecoin", type: "crypto", price: "$300.00", change: "-0.5%" },
-  { name: "Solana", symbol: "SOL", id: "solana", type: "crypto", price: "$20.00", change: "+3.1%" },
-  { name: "USD Coin", symbol: "USDC", id: "usd-coin", type: "crypto", price: "$1.00", change: "0.0%" },
-  { name: "Dogecoin", symbol: "DOGE", id: "dogecoin", type: "crypto", price: "$0.07", change: "+0.8%" },
-  { name: "Cardano", symbol: "ADA", id: "cardano", type: "crypto", price: "$0.35", change: "-1.2%" },
-  { name: "TRON", symbol: "TRX", id: "tron", type: "crypto", price: "$0.08", change: "+0.5%" },
-  { name: "Sui", symbol: "SUI", id: "sui", type: "crypto", price: "$0.10", change: "-0.3%" },
-  { name: "Hyperliquid", symbol: "HYPE", id: "hyperliquid", type: "crypto", price: "$0.50", change: "+2.0%" },
-  { name: "Chainlink", symbol: "LINK", id: "chainlink", type: "crypto", price: "$7.50", change: "+1.5%" },
-  { name: "Avalanche", symbol: "AVAX", id: "avalanche-2", type: "crypto", price: "$15.00", change: "-0.8%" },
-  { name: "Stellar", symbol: "XLM", id: "stellar", type: "crypto", price: "$0.12", change: "+0.9%" },
-  { name: "Toncoin", symbol: "TON", id: "the-open-network", type: "crypto", price: "$2.00", change: "+1.1%" },
-  { name: "Shiba Inu", symbol: "SHIB", id: "shiba-inu", type: "crypto", price: "$0.00001", change: "+0.3%" },
-  { name: "UNUS SED LEO", symbol: "LEO", id: "leo-token", type: "crypto", price: "$4.00", change: "-0.2%" },
-  { name: "Bitcoin Cash", symbol: "BCH", id: "bitcoin-cash", type: "crypto", price: "$120.00", change: "+1.8%" },
-  { name: "Hedera", symbol: "HBAR", id: "hedera-hashgraph", type: "crypto", price: "$0.05", change: "+0.6%" },
-  { name: "Litecoin", symbol: "LTC", id: "litecoin", type: "crypto", price: "$90.00", change: "-0.4%" },
-  { name: "Polkadot", symbol: "DOT", id: "polkadot", type: "crypto", price: "$5.00", change: "+0.7%" },
-  { name: "Monero", symbol: "XMR", id: "monero", type: "crypto", price: "$150.00", change: "+1.0%" },
-  { name: "Bitget Token", symbol: "BGB", id: "bitget-token", type: "crypto", price: "$0.20", change: "+0.5%" },
-  { name: "Pepe", symbol: "PEPE", id: "pepe", type: "crypto", price: "$0.000001", change: "+0.2%" },
+  { name: "Bitcoin", symbol: "BTC", id: "bitcoin", type: "crypto", price: "$42,350", change: "+2.3%", photo: "/assets/bitcoin.png" },
+  { name: "Ethereum", symbol: "ETH", id: "ethereum", type: "crypto", price: "$2,420", change: "+5.7%", photo: "/assets/ethereum.png" },
+  { name: "Tether", symbol: "USDT", id: "tether", type: "crypto", price: "$1.00", change: "0.0%", photo: "/assets/tether.png" },
+  { name: "XRP", symbol: "XRP", id: "ripple", type: "crypto", price: "$0.50", change: "+1.2%", photo: "/assets/xrp.png" },
+  { name: "BNB", symbol: "BNB", id: "binancecoin", type: "crypto", price: "$300.00", change: "-0.5%", photo: "/assets/bnb.png" },
+  { name: "Solana", symbol: "SOL", id: "solana", type: "crypto", price: "$20.00", change: "+3.1%", photo: "/assets/solana.png" },
+  { name: "Dogecoin", symbol: "DOGE", id: "dogecoin", type: "crypto", price: "$0.07", change: "+0.8%", photo: "/assets/dogecoin.png" },
+  { name: "Cardano", symbol: "ADA", id: "cardano", type: "crypto", price: "$0.35", change: "-1.2%", photo: "/assets/cardano.png" },
+  { name: "TRON", symbol: "TRX", id: "tron", type: "crypto", price: "$0.08", change: "+0.5%", photo: "/assets/tron.png" },
+  { name: "Sui", symbol: "SUI", id: "sui", type: "crypto", price: "$0.10", change: "-0.3%", photo: "/assets/sui.png" },
+  { name: "Chainlink", symbol: "LINK", id: "chainlink", type: "crypto", price: "$7.50", change: "+1.5%", photo: "/assets/chainlink.png" },
+  { name: "Avalanche", symbol: "AVAX", id: "avalanche-2", type: "crypto", price: "$15.00", change: "-0.8%", photo: "/assets/avalanche.png" },
+  { name: "Stellar", symbol: "XLM", id: "stellar", type: "crypto", price: "$0.12", change: "+0.9%", photo: "/assets/stellar.png" },
+  { name: "Toncoin", symbol: "TON", id: "the-open-network", type: "crypto", price: "$2.00", change: "+1.1%", photo: "/assets/toncoin.png" },
+  { name: "Shiba Inu", symbol: "SHIB", id: "shiba-inu", type: "crypto", price: "$0.00001", change: "+0.3%", photo: "/assets/shiba.png" },
+  { name: "UNUS SED LEO", symbol: "LEO", id: "leo-token", type: "crypto", price: "$4.00", change: "-0.2%", photo: "/assets/leo.png" },
+  { name: "Bitcoin Cash", symbol: "BCH", id: "bitcoin-cash", type: "crypto", price: "$120.00", change: "+1.8%", photo: "/assets/bitcoin-cash.png" },
+  { name: "Hedera", symbol: "HBAR", id: "hedera-hashgraph", type: "crypto", price: "$0.05", change: "+0.6%", photo: "/assets/hedera.png" },
+  { name: "Litecoin", symbol: "LTC", id: "litecoin", type: "crypto", price: "$90.00", change: "-0.4%", photo: "/assets/litecoin.png" },
+  { name: "Polkadot", symbol: "DOT", id: "polkadot", type: "crypto", price: "$5.00", change: "+0.7%", photo: "/assets/polkadot.png" },
+  { name: "Monero", symbol: "XMR", id: "monero", type: "crypto", price: "$150.00", change: "+1.0%", photo: "/assets/monero.png" },
+  { name: "Bitget Token", symbol: "BGB", id: "bitget-token", type: "crypto", price: "$0.20", change: "+0.5%", photo: "/assets/bitget-token.png" },
+  { name: "Pepe", symbol: "PEPE", id: "pepe", type: "crypto", price: "$0.000001", change: "+0.2%", photo: "/assets/pepe.png" },
 ];
 
 const riskToleranceOptions = [
@@ -264,10 +262,7 @@ export default function AnalysisPage() {
                       <p className="text-xs text-muted-foreground">{asset.name}</p>
                     </div>
                     <div className="text-right">
-                      <p className="font-medium text-sm">{asset.price}</p>
-                      <p className={`text-xs ${asset.change.startsWith("+") ? "text-green-600" : "text-red-600"}`}>
-                        {asset.change}
-                      </p>
+                      <img src={asset.photo} alt={`${asset.name} logo`} className="w-8 h-8 rounded-full" />
                     </div>
                   </div>
                 </CardContent>
